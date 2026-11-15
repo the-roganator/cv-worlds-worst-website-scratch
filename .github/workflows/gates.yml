@@ -67,6 +67,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
-    uses: the-roganator/cv-software-factory/.github/workflows/app-gates.yml@e3e4298d9d0e5650cb99f9bccc309457c3736102 # main
+    uses: the-roganator/cv-software-factory-scratch/.github/workflows/app-gates.yml@67f8e6a3c8bbf6374227243963eb9566b83efb02 # main
     with:
       skip: ${{ needs.kind.outputs.kind != 'code' }}
