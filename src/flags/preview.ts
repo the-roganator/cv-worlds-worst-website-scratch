@@ -2,7 +2,7 @@
  * The preview cookie: the flags a browser asked to preview, with `?preview=<flag>` on any page.
  *
  * The contract is the factory's (docs/COMPONENTS/FEATURE-FLAGS.md, "The preview cookie", in
- * the-roganator/cv-software-factory), whose probes hold every attribute to it. It is the one thing the shop keeps on
+ * the-roganator/cv-software-factory-scratch), whose probes hold every attribute to it. It is the one thing the shop keeps on
  * a visitor's device, and only for one who asks. The cookie names flags and decides nothing: flagd does.
  */
 import type { IncomingMessage } from 'node:http';
