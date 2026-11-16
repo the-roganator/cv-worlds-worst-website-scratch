@@ -40,4 +40,16 @@ describe('the search page', () => {
     expect(body).not.toContain('<script>alert(1)</script>');
     expect(body).toContain('&lt;script&gt;alert(1)&lt;/script&gt;');
   });
+
+  it('keeps a percent sign as typed', async () => {
+    const { status, body } = await shop.get('/search?q=100%25');
+    expect(status).toBe(200);
+    expect(tags(body, 'input').find((input) => input.attributes.name === 'q')?.attributes.value).toBe('100%');
+  });
+
+  it('keeps text that looks like broken percent encoding as typed', async () => {
+    const { status, body } = await shop.get(`/search?q=${encodeURIComponent('%E0%A4%A')}`);
+    expect(status).toBe(200);
+    expect(tags(body, 'input').find((input) => input.attributes.name === 'q')?.attributes.value).toBe('%E0%A4%A');
+  });
 });
