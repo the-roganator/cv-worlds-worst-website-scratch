@@ -43,4 +43,11 @@ describe('a department', () => {
   it('answers 404 at the plainer address when there is no such department', async () => {
     expect((await shop.get('/departments/attic')).status).toBe(404);
   });
+
+  it.each(['garden', 'kitchen'])('redirects /departments/%s once to its list, which answers 200', async (slug) => {
+    const moved = await shop.get(`/departments/${slug}`);
+    expect(moved.status).toBe(308);
+    expect(moved.headers.get('location')).toBe(`/products?department=${slug}`);
+    expect((await shop.get(`/products?department=${slug}`)).status).toBe(200);
+  });
 });
