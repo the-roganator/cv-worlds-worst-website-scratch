@@ -2,7 +2,7 @@
  * The share's signed ids: which of the factory's traffic generator's requests carry an id the shop may target by.
  *
  * The contract is the factory's (docs/COMPONENTS/FEATURE-FLAGS.md, "The share's signed ids", in
- * the-roganator/cv-software-factory): three headers, each sent once; the time in whole seconds, less than a minute old
+ * the-roganator/cv-software-factory-scratch): three headers, each sent once; the time in whole seconds, less than a minute old
  * and not from the future by the shop's own clock; and an Ed25519 signature over six length-prefixed fields, built from
  * the shop's own view of the request (its `Host`, method and request target), never from anything else it says about
  * itself. Anything else, and the request is not signed.
