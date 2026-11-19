@@ -1,6 +1,6 @@
 /**
  * The share's test vector, from the factory's contract (docs/COMPONENTS/FEATURE-FLAGS.md, "Test vector", in
- * the-roganator/cv-software-factory), and a signer that makes more like it with the same key.
+ * the-roganator/cv-software-factory-scratch), and a signer that makes more like it with the same key.
  */
 import { createPrivateKey, sign } from 'node:crypto';
 import { shareMessage } from '../../src/flags/share.ts';
