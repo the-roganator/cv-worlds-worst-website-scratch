@@ -61,7 +61,7 @@ describe('the daily vulnerability scan', () => {
 
   it('calls the scan at a full commit', () => {
     expect(job('vulnerabilities')).toMatch(
-      /^ {4}uses: the-roganator\/cv-software-factory\/\.github\/workflows\/vulnerabilities\.yml@[0-9a-f]{40} # main$/m,
+      /^ {4}uses: the-roganator\/cv-software-factory-scratch\/\.github\/workflows\/vulnerabilities\.yml@[0-9a-f]{40} # main$/m,
     );
   });
 
@@ -72,7 +72,7 @@ describe('the daily vulnerability scan', () => {
     expect(graph).toMatch(/^ {4}if: \$\{\{ github\.event_name == 'push' \}\}$/m);
     expect(grant(graph)).toBe('      contents: write\n');
     expect(graph).toMatch(
-      /^ {4}uses: the-roganator\/cv-software-factory\/\.github\/workflows\/dependency-graph\.yml@[0-9a-f]{40} # main$/m,
+      /^ {4}uses: the-roganator\/cv-software-factory-scratch\/\.github\/workflows\/dependency-graph\.yml@[0-9a-f]{40} # main$/m,
     );
   });
 
@@ -84,7 +84,7 @@ describe('the daily vulnerability scan', () => {
       .flatMap((name) =>
         [
           ...readFileSync(new URL(name, workflows), 'utf-8').matchAll(
-            /^\s*(?:- )?uses:\s*['"]?the-roganator\/cv-software-factory\/([^@\s'"]+)@([^\s'"]+)/gim,
+            /^\s*(?:- )?uses:\s*['"]?the-roganator\/cv-software-factory-scratch\/([^@\s'"]+)@([^\s'"]+)/gim,
           ),
         ].map(([, path, ref]) => ({ name, path, ref })),
       );
