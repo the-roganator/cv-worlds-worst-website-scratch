@@ -76,3 +76,4 @@ jobs:
     # and nothing else is.
     secrets:
       REVIEW_APP_PRIVATE_KEY: ${{ secrets.REVIEW_APP_PRIVATE_KEY }}
+      SCAN_STATE_KEY: ${{ secrets.SCAN_STATE_KEY }}
