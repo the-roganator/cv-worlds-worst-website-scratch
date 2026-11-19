@@ -75,7 +75,7 @@ describe('a share id', () => {
     expect(signedId(request(VECTOR.headers, { host, method, path: '/search?q=gloves' }), KEY, time)).toBeUndefined();
     expect(signedId(request(VECTOR.headers, { host, method, path: '/search' }), KEY, time)).toBeUndefined();
     expect(
-      signedId(request(VECTOR.headers, { host: 'website.localhost:8080', method, path }), KEY, time),
+      signedId(request(VECTOR.headers, { host: 'website.localhost:9080', method, path }), KEY, time),
     ).toBeUndefined();
     expect(signedId(request(VECTOR.headers, { host: 'elsewhere.localhost', method, path }), KEY, time)).toBeUndefined();
     expect(signedId(request(VECTOR.headers, { host, method: 'POST', path }), KEY, time)).toBeUndefined();
