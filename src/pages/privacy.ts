@@ -62,7 +62,7 @@ export const privacyRoute: Route = {
 
         <p class="quiet">
           This shop is run by Martin Rogan as a
-          <a href="https://github.com/the-roganator/cv-worlds-worst-website">demonstration</a>.
+          <a href="https://github.com/the-roganator/cv-worlds-worst-website-scratch">demonstration</a>.
         </p>`,
     }),
 };
