@@ -1,6 +1,6 @@
 /**
  * The preview cookie, as the factory's contract has it (docs/COMPONENTS/FEATURE-FLAGS.md, "The preview cookie", in
- * the-roganator/cv-software-factory): set only for an ask that names flags flagd knows, for exactly a day, and never
+ * the-roganator/cv-software-factory-scratch): set only for an ask that names flags flagd knows, for exactly a day, and never
  * echoed. The factory's probes hold its attributes; these tests hold the lifetime and the "flagd knows it" rule.
  */
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest';
