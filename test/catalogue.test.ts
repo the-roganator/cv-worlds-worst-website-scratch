@@ -31,6 +31,27 @@ describe('a page of products', () => {
     expect(page?.products.every((p) => p.department === 'garden')).toBe(true);
   });
 
+  it('starts at the first product and holds every product once across pages', () => {
+    const first = catalogue().page(1);
+    const ids: number[] = [];
+    for (let n = 1; n <= (first?.pages ?? 0); n++)
+      ids.push(
+        ...(catalogue()
+          .page(n)
+          ?.products.map((p) => p.id) ?? []),
+      );
+    expect(ids).toHaveLength(first?.total ?? -1);
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(ids[0]).toBe(Math.min(...ids));
+  });
+
+  it('returns all of a small department, from its first product', () => {
+    const page = catalogue().page(1, 'garden');
+    expect(page?.products).toHaveLength(page?.total ?? -1);
+    const ids = page?.products.map((p) => p.id) ?? [];
+    expect(ids[0]).toBe(Math.min(...ids));
+  });
+
   it('is a single empty page for a department with nothing in it', () => {
     expect(catalogue().page(1, 'attic')).toMatchObject({ products: [], pages: 1, total: 0 });
   });
