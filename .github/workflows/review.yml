@@ -14,8 +14,8 @@
 #
 # AUTONOMY is this repository's variable, `vars.AUTONOMY`, which the gate reads in main's copy, never from an input,
 # so neither a pull request nor this file can say Lights-out. Only an admin of this repository, Martin, can set it:
-# `gh variable set AUTONOMY -R the-roganator/cv-worlds-worst-website -b lights-out`, and
-# `gh variable delete AUTONOMY -R the-roganator/cv-worlds-worst-website` to go back.
+# `gh variable set AUTONOMY -R the-roganator/cv-worlds-worst-website-scratch -b lights-out`, and
+# `gh variable delete AUTONOMY -R the-roganator/cv-worlds-worst-website-scratch` to go back.
 #
 # The gate lives in Software Factory's repository and is called at a pinned commit, so both repositories keep one rule
 # and a change here cannot loosen it. It judges this repository's pull requests, through the API, and never checks
@@ -71,7 +71,7 @@ jobs:
       # proves nothing. The called pin move job asks for it too, though it never runs here, and a called job may
       # have no more than its caller grants.
       actions: read
-    uses: the-roganator/cv-software-factory/.github/workflows/review.yml@adfb13c4017363bcb193e83199d142b4e45b0bfc # main
+    uses: the-roganator/cv-software-factory-scratch/.github/workflows/review.yml@fb63cd0721263bc92e0e5433384b1e8370c4f080 # main
     # The called job names the `review` environment, this repository's, but a secret reaches it only when the caller
     # passes it, even one held in that environment alone. The called workflow declares the key, so it is passed by name,
     # and nothing else is.
