@@ -105,7 +105,7 @@ describe('the review gate and merge queue workflows', () => {
     expect(requested).toMatch(/^ {4}permissions:\n {6}contents: read\n {6}pull-requests: read(?: #.*)?\n {4}uses:/m);
     expect(requested).not.toMatch(/secrets|: write\b/);
     expect(requested).toMatch(
-      /^ {4}uses: the-roganator\/cv-software-factory\/\.github\/workflows\/pull-request\.yml@[0-9a-f]{40} # main$/m,
+      /^ {4}uses: the-roganator\/cv-software-factory-scratch\/\.github\/workflows\/pull-request\.yml@[0-9a-f]{40} # main$/m,
     );
   });
 });
