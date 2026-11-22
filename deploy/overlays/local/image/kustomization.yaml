@@ -3,4 +3,4 @@ kind: Component
 images:
 - name: website
   newName: ghcr.io/the-roganator/cv-worlds-worst-website-scratch
-  digest: sha256:bf65e5a67712422e0658e2ece3c5b9283191b0612086cbd8134c36626a221fa8
+  digest: sha256:69d03b603ff2fb714cfe1fefd9f6320299f8391a8e7dcbe70736fb022352cc0e
