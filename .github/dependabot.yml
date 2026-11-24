@@ -69,3 +69,4 @@ updates:
     commit-message:
       prefix: chore
       include: scope
+# The factory group is tried on the scratch copy.
