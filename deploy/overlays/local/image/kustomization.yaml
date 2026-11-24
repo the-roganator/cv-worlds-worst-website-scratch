@@ -2,5 +2,5 @@ apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
 images:
 - name: website
-  newName: ghcr.io/the-roganator/cv-worlds-worst-website
-  digest: sha256:0a04e1fd9bf6c935daf23027064c493bb8a59a5a2a913b3b7ed82aae2d4168d1
+  newName: ghcr.io/the-roganator/cv-worlds-worst-website-scratch
+  digest: sha256:5f29c8d6d3de9287874b262f7477b77b978a6ac343d76957d860786c3a3a31a9
