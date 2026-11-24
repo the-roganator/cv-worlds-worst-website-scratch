@@ -36,8 +36,11 @@ updates:
     commit-message:
       prefix: ci
     groups:
+      factory:
+        patterns: ['the-roganator/cv-software-factory-scratch/*']
       actions:
         patterns: ['*']
+        exclude-patterns: ['the-roganator/cv-software-factory-scratch/*']
 
   - package-ecosystem: docker
     directories:
