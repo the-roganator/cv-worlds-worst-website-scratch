@@ -17,7 +17,7 @@
 <!-- What proves it: new or changed tests, and how you ran them. -->
 <!-- Deleting an existing test, or changing what it asserts, fails test integrity unless the description names it in a
 section of tests the spec contradicts. The factory writes that section on its own pull requests; by hand, see
-https://github.com/the-roganator/cv-software-factory/blob/main/docs/COMPONENTS/TEST-INTEGRITY.md#tests-the-spec-contradicts -->
+https://github.com/the-roganator/cv-software-factory-scratch/blob/main/docs/COMPONENTS/TEST-INTEGRITY.md#tests-the-spec-contradicts -->
 
 ## Risk
 
