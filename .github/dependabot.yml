@@ -35,17 +35,17 @@ updates:
       default-days: 3
       # Software Factory's workflows are called at a commit of its main, which is minutes old when it should be taken:
       # the factory's own gates are what it waited for.
-      exclude: ['the-roganator/cv-software-factory/*']
+      exclude: ['the-roganator/cv-software-factory-scratch/*']
     commit-message:
       prefix: ci
     groups:
       # Software Factory's workflows, which move together to one commit of its main: a pull request of their own, apart
       # from every other action's.
       factory:
-        patterns: ['the-roganator/cv-software-factory/*']
+        patterns: ['the-roganator/cv-software-factory-scratch/*']
       actions:
         patterns: ['*']
-        exclude-patterns: ['the-roganator/cv-software-factory/*']
+        exclude-patterns: ['the-roganator/cv-software-factory-scratch/*']
 
   - package-ecosystem: docker
     directories:
