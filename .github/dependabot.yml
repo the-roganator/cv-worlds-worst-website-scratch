@@ -33,6 +33,7 @@ updates:
       interval: weekly
     cooldown:
       default-days: 3
+      exclude: ['the-roganator/cv-software-factory-scratch/*']
     commit-message:
       prefix: ci
     groups:
