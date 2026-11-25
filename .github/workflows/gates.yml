@@ -39,7 +39,7 @@ jobs:
     outputs:
       kind: ${{ steps.which.outputs.kind }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@28802689a136bfcdb721715abd713740beecbe07 # v7.0.1
         if: github.event_name == 'pull_request'
         with:
           persist-credentials: false
@@ -67,6 +67,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
-    uses: the-roganator/cv-software-factory-scratch/.github/workflows/app-gates.yml@2c26d96b0dc16d8995b4d5fa68b491e4fdfba90f # main
+    uses: the-roganator/cv-software-factory-scratch/.github/workflows/app-gates.yml@5e5e32383dd5b9912bcc9efcb2c38650abcf5116 # main
     with:
       skip: ${{ needs.kind.outputs.kind != 'code' }}
