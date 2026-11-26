@@ -72,4 +72,4 @@ Every page carries "Report a problem": one box, for telling the shop that someth
 
 ## Names
 
-The repository is `cv-worlds-worst-website`, and its README explains the joke. The site itself is only ever "Mossop's Practical Sundries".
+The repository is `cv-worlds-worst-website-scratch`, and its README explains the joke. The site itself is only ever "Mossop's Practical Sundries".
