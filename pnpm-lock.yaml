@@ -207,8 +207,8 @@ importers:
         specifier: ^24.19.2
         version: 24.19.2
       follow-redirects:
-        specifier: 1.14.8
-        version: 1.14.8(debug@4.4.3)
+        specifier: 1.16.0
+        version: 1.16.0(debug@4.4.3)
       lefthook:
         specifier: ^2.1.17
         version: 2.1.17
@@ -863,8 +863,8 @@ packages:
       picomatch:
         optional: true
 
-  follow-redirects@1.14.8:
-    resolution: {integrity: sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==}
+  follow-redirects@1.16.0:
+    resolution: {integrity: sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -1817,7 +1817,7 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.7
 
-  follow-redirects@1.14.8(debug@4.4.3):
+  follow-redirects@1.16.0(debug@4.4.3):
     optionalDependencies:
       debug: 4.4.3
 
