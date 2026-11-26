@@ -65,7 +65,7 @@ jobs:
       # The scan's moves, an artifact of vulnerabilities.yml's last run on main, which the called `move` job reads; a
       # called job may have no more than its caller grants.
       actions: read
-    uses: the-roganator/cv-software-factory-scratch/.github/workflows/review.yml@9163757dd91b86d4822a29410c5bad48125ac3ec # main
+    uses: the-roganator/cv-software-factory-scratch/.github/workflows/review.yml@26cc48cf51934858ec35ac332e6402220c1680ae # main
     # The called jobs name the `review` and `scan-state` environments, this repository's, but a secret reaches a job
     # only when the caller passes it, even one held in that environment alone. The called workflow declares both keys,
     # so each is passed by name, and nothing else is.
