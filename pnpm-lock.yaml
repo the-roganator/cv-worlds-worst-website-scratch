@@ -206,6 +206,9 @@ importers:
       '@types/node':
         specifier: ^24.19.2
         version: 24.19.2
+      follow-redirects:
+        specifier: 1.14.8
+        version: 1.14.8(debug@4.4.3)
       lefthook:
         specifier: ^2.1.17
         version: 2.1.17
@@ -858,6 +861,15 @@ packages:
       picomatch: ^3 || ^4
     peerDependenciesMeta:
       picomatch:
+        optional: true
+
+  follow-redirects@1.14.8:
+    resolution: {integrity: sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
         optional: true
 
   forwarded-parse@2.2.0:
@@ -1804,6 +1816,10 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
       picomatch: 4.0.7
+
+  follow-redirects@1.14.8(debug@4.4.3):
+    optionalDependencies:
+      debug: 4.4.3
 
   forwarded-parse@2.2.0: {}
 

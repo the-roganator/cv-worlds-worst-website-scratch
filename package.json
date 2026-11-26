@@ -31,6 +31,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.6.6",
     "@types/node": "^24.19.2",
+    "follow-redirects": "1.14.8",
     "lefthook": "^2.1.17",
     "make-dir": "2.1.0",
     "node-abi": "3.99.0",
