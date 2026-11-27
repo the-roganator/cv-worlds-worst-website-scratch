@@ -38,15 +38,15 @@ updates:
       interval: weekly
     cooldown:
       default-days: 3
-      exclude: ['the-roganator/cv-software-factory/*']
+      exclude: ['the-roganator/cv-software-factory-scratch/*']
     commit-message:
       prefix: ci
     groups:
       factory:
-        patterns: ['the-roganator/cv-software-factory/*']
+        patterns: ['the-roganator/cv-software-factory-scratch/*']
       actions:
         patterns: ['*']
-        exclude-patterns: ['the-roganator/cv-software-factory/*']
+        exclude-patterns: ['the-roganator/cv-software-factory-scratch/*']
 
   - package-ecosystem: docker
     directories:
