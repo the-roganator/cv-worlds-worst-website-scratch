@@ -62,7 +62,7 @@ jobs:
       contents: write # the dependency submission API, with the graph job's token
       packages: read # the advisory database and the images in GHCR, with the job's token
       security-events: write # upload the results to code scanning
-    uses: the-roganator/cv-software-factory-scratch/.github/workflows/vulnerabilities.yml@2edaa7040637b8c3915c726ad077b0e165564b30 # main
+    uses: the-roganator/cv-software-factory-scratch/.github/workflows/vulnerabilities.yml@b4cc5b0317354fb76015d46413b8dba6316492b9 # main
     # The called scan and pins jobs name the `scan-state` environment, this repository's, but a secret reaches them only
     # when the caller passes it, even one held in that environment alone. The called workflow declares the key, so it is
     # passed by name, and nothing else is.
