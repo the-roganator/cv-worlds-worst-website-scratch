@@ -43,7 +43,7 @@ jobs:
           AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           kind=code
-          if [ "$GITHUB_EVENT_NAME" = pull_request ] && [ "$AUTHOR" = 'mrogan-software-factory[bot]' ]; then
+          if [ "$GITHUB_EVENT_NAME" = pull_request ] && [ "$AUTHOR" = 'the-roganator-scratch-factory[bot]' ]; then
             files=$(git diff --name-only HEAD^1 HEAD)
             # Every changed line of package.json is its version.
             other_lines=$(git diff --unified=0 HEAD^1 HEAD -- package.json | grep -E '^[-+]' | grep -vE '^(\+\+\+|---) ' | grep -vE '^[-+]  "version": "[^"]+",$' || true)

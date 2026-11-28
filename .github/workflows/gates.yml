@@ -49,7 +49,7 @@ jobs:
           AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           kind=code
-          if [ "$GITHUB_EVENT_NAME" = pull_request ] && [ "$AUTHOR" = 'mrogan-software-factory[bot]' ]; then
+          if [ "$GITHUB_EVENT_NAME" = pull_request ] && [ "$AUTHOR" = 'the-roganator-scratch-factory[bot]' ]; then
             files=$(git diff --name-only HEAD^1 HEAD)
             other_lines=$(git diff --unified=0 HEAD^1 HEAD -- package.json | grep -E '^[-+]' | grep -vE '^(\+\+\+|---) ' | grep -vE '^[-+]  "version": "[^"]+",$' || true)
             if [ -n "$files" ] && ! grep -vqxE 'CHANGELOG\.md|package\.json|\.release-please-manifest\.json' <<< "$files" && [ -z "$other_lines" ]; then
@@ -67,6 +67,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
-    uses: the-roganator/cv-software-factory/.github/workflows/app-gates.yml@cff179ae7a982ca831d28a86bf39a7120cd07f88 # main
+    uses: the-roganator/cv-software-factory-scratch/.github/workflows/app-gates.yml@c04a17a4ec60fc8b99dfc050e3633db0d753eccc # main
     with:
       skip: ${{ needs.kind.outputs.kind != 'code' }}
