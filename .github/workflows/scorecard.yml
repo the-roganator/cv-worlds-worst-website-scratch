@@ -19,4 +19,4 @@ jobs:
       actions: read
       security-events: write # upload the results to code scanning
       id-token: write # publish the results
-    uses: the-roganator/cv-software-factory-scratch/.github/workflows/scorecard.yml@caa293a06e35941e0f15f23232d363b8306923c4 # main
+    uses: the-roganator/cv-software-factory-scratch/.github/workflows/scorecard.yml@90be8b2343a2fd8c0d3f957affbc29c7a273ff72 # main
